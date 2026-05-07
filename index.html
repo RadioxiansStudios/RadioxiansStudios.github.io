@@ -1,47 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radioxians Studios | Official Site</title>
+    <title>Radioxians Studios | Official Website</title>
     <style>
+        /* Stile Generale */
         body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0b0b0b;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar (Menu in alto) */
+        nav {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #00ff00;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        nav a:hover { color: #00ff00; }
+
+        /* Sezioni */
+        section {
+            padding: 100px 20px;
             text-align: center;
-            padding: 50px;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        .container {
-            border: 3px solid #00ff00;
+
+        /* Home Section */
+        #home {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            height: 100vh;
+        }
+        
+        h1 { font-size: 4em; color: #00ff00; margin: 0; text-shadow: 3px 3px #000; }
+        
+        /* Box dei contenuti */
+        .content-box {
+            max-width: 800px;
+            background: #1a1a1a;
             padding: 40px;
-            border-radius: 20px;
-            display: inline-block;
-            background-color: #111111;
-            box-shadow: 0 0 20px #00ff00;
+            border-radius: 15px;
+            border: 1px solid #333;
         }
-        h1 { color: #00ff00; font-size: 3.5em; text-shadow: 2px 2px #000; }
-        p { font-size: 1.5em; color: #00cc00; }
+
+        #about { background-color: #111; }
+        #projects { background-color: #0b0b0b; }
+
         .btn {
-            display: inline-block;
-            margin-top: 20px;
-            color: #000;
             background-color: #00ff00;
+            color: black;
             padding: 15px 30px;
             text-decoration: none;
-            font-weight: bold;
             border-radius: 5px;
-            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
         }
-        .btn:hover { background-color: #00cc00; }
+
+        footer {
+            padding: 20px;
+            background: #000;
+            border-top: 1px solid #333;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
         <h1>RADIOXIANS STUDIOS</h1>
-        <p>The Future of Gaming is Here.</p>
-        <p>Specialized in Unity & C# Development</p>
-        <a href="https://github.com/RadioxiansStudios" class="btn">Explore My Scripts</a>
-    </div>
+        <p>Innovation in Gaming & C# Development</p>
+        <a href="#projects" class="btn">DISCOVER OUR WORK</a>
+    </section>
+
+    <section id="about">
+        <div class="content-box">
+            <h2 style="color: #00ff00;">ABOUT US</h2>
+            <p>Radioxians Studios is an emerging game development studio founded in 2026. We specialize in creating high-quality scripts for Unity and developing immersive experiences.</p>
+            <p>Our mission is to push the boundaries of C# programming and game design.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 style="color: #00ff00;">OUR PROJECTS</h2>
+        <p>Check out our latest Unity tutorials and scripts on GitHub.</p>
+        <div style="margin-top: 20px;">
+            <a href="https://github.com/RadioxiansStudios" class="btn" target="_blank">GO TO GITHUB</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 style="color: #00ff00;">CONTACT</h2>
+        <p>Want to collaborate? Reach out to us through our official channels.</p>
+        <p>Email: info@radioxiansstudios.com (Coming Soon)</p>
+    </section>
+
+    <footer>
+        © 2026 Radioxians Studios. All rights reserved. Registered Developer.
+    </footer>
+
 </body>
 </html>
